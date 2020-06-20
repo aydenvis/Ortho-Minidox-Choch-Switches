@@ -1,1 +1,1 @@
-The ChocDox folder is the qmk keyboard, whereas the 3DotDash one is the kicad pcb files
+The ChocDox folder is the qmk keyboard, whereas the 3DotDash one is the kicad pcb files. The pcb files use the wrong footprint and thus are only solderable from the one side and need to be fought to be fully completed. The soldermask coveres the pads, so no solderable surface is visible.
