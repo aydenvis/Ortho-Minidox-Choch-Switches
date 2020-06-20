@@ -1,0 +1,1 @@
+This board is a minidox but for choc switches. There is literally nothing else to it. Contact /u/aydenvis if you'd like the gerbers for the pcb.
