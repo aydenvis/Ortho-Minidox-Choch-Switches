@@ -1,0 +1,1 @@
+The ChocDox folder is the qmk keyboard, whereas the 3DotDash one is the kicad pcb files
