@@ -1,1 +1,5 @@
-The ChocDox folder is the qmk keyboard, whereas the 3DotDash one is the kicad pcb files. The pcb files use the wrong footprint and thus are only solderable from the one side and need to be fought to be fully completed. The soldermask coveres the pads, so no solderable surface is visible.
+The QMK folder has the chocdox keyboard folder for you to place in your QMK repo.
+
+The PCB Files folder holds the kicad files for the orthogonal version.
+
+The VVolumn Staggered Variant PCB Files folder holds the kicad files for the column staggered version which features a severe stagger, fit to my hand.
