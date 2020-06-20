@@ -1,0 +1,733 @@
+EESchema Schematic File Version 4
+LIBS:CurvedChoc-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L KeyboardLibrary:ProMicro U1
+U 1 1 5EEC4FBF
+P 2650 2300
+F 0 "U1" H 2650 3250 60  0000 C CNN
+F 1 "ProMicro" H 2650 1750 60  0000 C CNN
+F 2 "KeyboardFootprints:ProMicro" H 2750 1250 60  0001 C CNN
+F 3 "" H 2750 1250 60  0000 C CNN
+	1    2650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW3
+U 1 1 5EECAD88
+P 5950 1750
+F 0 "SW3" H 5850 2000 50  0000 C CNN
+F 1 "Switch" H 5900 1800 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 5950 1750 50  0001 C CNN
+F 3 "" H 5950 1750 50  0001 C CNN
+	1    5950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D1
+U 1 1 5EECB193
+P 5800 1850
+F 0 "D1" H 5950 1850 50  0000 C CNN
+F 1 "Diode" H 5900 1950 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 5900 1950 50  0001 C CNN
+F 3 "" H 5900 1950 50  0001 C CNN
+	1    5800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW4
+U 1 1 5EECCAC5
+P 6350 1750
+F 0 "SW4" H 6250 2000 50  0000 C CNN
+F 1 "Switch" H 6300 1800 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6350 1750 50  0001 C CNN
+F 3 "" H 6350 1750 50  0001 C CNN
+	1    6350 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D2
+U 1 1 5EECCACB
+P 6200 1850
+F 0 "D2" H 6350 1850 50  0000 C CNN
+F 1 "Diode" H 6300 1950 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6300 1950 50  0001 C CNN
+F 3 "" H 6300 1950 50  0001 C CNN
+	1    6200 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW5
+U 1 1 5EEDAD36
+P 6750 1750
+F 0 "SW5" H 6650 2000 50  0000 C CNN
+F 1 "Switch" H 6700 1800 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6750 1750 50  0001 C CNN
+F 3 "" H 6750 1750 50  0001 C CNN
+	1    6750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D3
+U 1 1 5EEDAD3C
+P 6600 1850
+F 0 "D3" H 6750 1850 50  0000 C CNN
+F 1 "Diode" H 6700 1950 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6700 1950 50  0001 C CNN
+F 3 "" H 6700 1950 50  0001 C CNN
+	1    6600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1950 7100 1950
+Wire Wire Line
+	6700 1950 6300 1950
+Connection ~ 6700 1950
+Connection ~ 6300 1950
+$Comp
+L KeyboardLibrary:Switch SW6
+U 1 1 5EEE12B5
+P 7150 1750
+F 0 "SW6" H 7050 2000 50  0000 C CNN
+F 1 "Switch" H 7100 1800 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7150 1750 50  0001 C CNN
+F 3 "" H 7150 1750 50  0001 C CNN
+	1    7150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D4
+U 1 1 5EEE12BB
+P 7000 1850
+F 0 "D4" H 7150 1850 50  0000 C CNN
+F 1 "Diode" H 7100 1950 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7100 1950 50  0001 C CNN
+F 3 "" H 7100 1950 50  0001 C CNN
+	1    7000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW7
+U 1 1 5EEE12C1
+P 7550 1750
+F 0 "SW7" H 7450 2000 50  0000 C CNN
+F 1 "Switch" H 7500 1800 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7550 1750 50  0001 C CNN
+F 3 "" H 7550 1750 50  0001 C CNN
+	1    7550 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D5
+U 1 1 5EEE12C7
+P 7400 1850
+F 0 "D5" H 7550 1850 50  0000 C CNN
+F 1 "Diode" H 7500 1950 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7500 1950 50  0001 C CNN
+F 3 "" H 7500 1950 50  0001 C CNN
+	1    7400 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 1950
+Wire Wire Line
+	7100 1950 7500 1950
+Connection ~ 5900 1950
+Wire Wire Line
+	5900 1950 6300 1950
+Wire Wire Line
+	5550 1950 5900 1950
+$Comp
+L KeyboardLibrary:Switch SW8
+U 1 1 5EEE687A
+P 5950 2350
+F 0 "SW8" H 5850 2600 50  0000 C CNN
+F 1 "Switch" H 5900 2400 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 5950 2350 50  0001 C CNN
+F 3 "" H 5950 2350 50  0001 C CNN
+	1    5950 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D6
+U 1 1 5EEE6880
+P 5800 2450
+F 0 "D6" H 5950 2450 50  0000 C CNN
+F 1 "Diode" H 5900 2550 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 5900 2550 50  0001 C CNN
+F 3 "" H 5900 2550 50  0001 C CNN
+	1    5800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW9
+U 1 1 5EEE6886
+P 6350 2350
+F 0 "SW9" H 6250 2600 50  0000 C CNN
+F 1 "Switch" H 6300 2400 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6350 2350 50  0001 C CNN
+F 3 "" H 6350 2350 50  0001 C CNN
+	1    6350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D7
+U 1 1 5EEE688C
+P 6200 2450
+F 0 "D7" H 6350 2450 50  0000 C CNN
+F 1 "Diode" H 6300 2550 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6300 2550 50  0001 C CNN
+F 3 "" H 6300 2550 50  0001 C CNN
+	1    6200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW10
+U 1 1 5EEE6894
+P 6750 2350
+F 0 "SW10" H 6650 2600 50  0000 C CNN
+F 1 "Switch" H 6700 2400 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6750 2350 50  0001 C CNN
+F 3 "" H 6750 2350 50  0001 C CNN
+	1    6750 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D8
+U 1 1 5EEE689A
+P 6600 2450
+F 0 "D8" H 6750 2450 50  0000 C CNN
+F 1 "Diode" H 6700 2550 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6700 2550 50  0001 C CNN
+F 3 "" H 6700 2550 50  0001 C CNN
+	1    6600 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2550 7100 2550
+Wire Wire Line
+	6700 2550 6300 2550
+Connection ~ 6700 2550
+Connection ~ 6300 2550
+$Comp
+L KeyboardLibrary:Switch SW11
+U 1 1 5EEE68A5
+P 7150 2350
+F 0 "SW11" H 7050 2600 50  0000 C CNN
+F 1 "Switch" H 7100 2400 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7150 2350 50  0001 C CNN
+F 3 "" H 7150 2350 50  0001 C CNN
+	1    7150 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D9
+U 1 1 5EEE68AB
+P 7000 2450
+F 0 "D9" H 7150 2450 50  0000 C CNN
+F 1 "Diode" H 7100 2550 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7100 2550 50  0001 C CNN
+F 3 "" H 7100 2550 50  0001 C CNN
+	1    7000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW12
+U 1 1 5EEE68B1
+P 7550 2350
+F 0 "SW12" H 7450 2600 50  0000 C CNN
+F 1 "Switch" H 7500 2400 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7550 2350 50  0001 C CNN
+F 3 "" H 7550 2350 50  0001 C CNN
+	1    7550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D10
+U 1 1 5EEE68B7
+P 7400 2450
+F 0 "D10" H 7550 2450 50  0000 C CNN
+F 1 "Diode" H 7500 2550 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7500 2550 50  0001 C CNN
+F 3 "" H 7500 2550 50  0001 C CNN
+	1    7400 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 2550
+Wire Wire Line
+	7100 2550 7500 2550
+Connection ~ 5900 2550
+Wire Wire Line
+	5900 2550 6300 2550
+Wire Wire Line
+	5550 2550 5900 2550
+$Comp
+L KeyboardLibrary:Switch SW13
+U 1 1 5EEED96B
+P 5950 2950
+F 0 "SW13" H 5850 3200 50  0000 C CNN
+F 1 "Switch" H 5900 3000 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 5950 2950 50  0001 C CNN
+F 3 "" H 5950 2950 50  0001 C CNN
+	1    5950 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D11
+U 1 1 5EEED971
+P 5800 3050
+F 0 "D11" H 5950 3050 50  0000 C CNN
+F 1 "Diode" H 5900 3150 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 5900 3150 50  0001 C CNN
+F 3 "" H 5900 3150 50  0001 C CNN
+	1    5800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW14
+U 1 1 5EEED977
+P 6350 2950
+F 0 "SW14" H 6250 3200 50  0000 C CNN
+F 1 "Switch" H 6300 3000 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6350 2950 50  0001 C CNN
+F 3 "" H 6350 2950 50  0001 C CNN
+	1    6350 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D12
+U 1 1 5EEED97D
+P 6200 3050
+F 0 "D12" H 6350 3050 50  0000 C CNN
+F 1 "Diode" H 6300 3150 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6300 3150 50  0001 C CNN
+F 3 "" H 6300 3150 50  0001 C CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW15
+U 1 1 5EEED985
+P 6750 2950
+F 0 "SW15" H 6650 3200 50  0000 C CNN
+F 1 "Switch" H 6700 3000 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6750 2950 50  0001 C CNN
+F 3 "" H 6750 2950 50  0001 C CNN
+	1    6750 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D13
+U 1 1 5EEED98B
+P 6600 3050
+F 0 "D13" H 6750 3050 50  0000 C CNN
+F 1 "Diode" H 6700 3150 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6700 3150 50  0001 C CNN
+F 3 "" H 6700 3150 50  0001 C CNN
+	1    6600 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3150 7100 3150
+Wire Wire Line
+	6700 3150 6300 3150
+Connection ~ 6700 3150
+Connection ~ 6300 3150
+$Comp
+L KeyboardLibrary:Switch SW16
+U 1 1 5EEED996
+P 7150 2950
+F 0 "SW16" H 7050 3200 50  0000 C CNN
+F 1 "Switch" H 7100 3000 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7150 2950 50  0001 C CNN
+F 3 "" H 7150 2950 50  0001 C CNN
+	1    7150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D14
+U 1 1 5EEED99C
+P 7000 3050
+F 0 "D14" H 7150 3050 50  0000 C CNN
+F 1 "Diode" H 7100 3150 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7100 3150 50  0001 C CNN
+F 3 "" H 7100 3150 50  0001 C CNN
+	1    7000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW17
+U 1 1 5EEED9A2
+P 7550 2950
+F 0 "SW17" H 7450 3200 50  0000 C CNN
+F 1 "Switch" H 7500 3000 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7550 2950 50  0001 C CNN
+F 3 "" H 7550 2950 50  0001 C CNN
+	1    7550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D15
+U 1 1 5EEED9A8
+P 7400 3050
+F 0 "D15" H 7550 3050 50  0000 C CNN
+F 1 "Diode" H 7500 3150 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7500 3150 50  0001 C CNN
+F 3 "" H 7500 3150 50  0001 C CNN
+	1    7400 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 3150
+Wire Wire Line
+	7100 3150 7500 3150
+Connection ~ 5900 3150
+Wire Wire Line
+	5900 3150 6300 3150
+Wire Wire Line
+	5550 3150 5900 3150
+$Comp
+L KeyboardLibrary:Switch SW19
+U 1 1 5EEF4E8A
+P 6750 3550
+F 0 "SW19" H 6650 3800 50  0000 C CNN
+F 1 "Switch" H 6700 3600 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 6750 3550 50  0001 C CNN
+F 3 "" H 6750 3550 50  0001 C CNN
+	1    6750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D16
+U 1 1 5EEF4E90
+P 6600 3650
+F 0 "D16" H 6750 3650 50  0000 C CNN
+F 1 "Diode" H 6700 3750 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6700 3750 50  0001 C CNN
+F 3 "" H 6700 3750 50  0001 C CNN
+	1    6600 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW20
+U 1 1 5EEF4E9B
+P 7150 3550
+F 0 "SW20" H 7050 3800 50  0000 C CNN
+F 1 "Switch" H 7100 3600 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7150 3550 50  0001 C CNN
+F 3 "" H 7150 3550 50  0001 C CNN
+	1    7150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D17
+U 1 1 5EEF4EA1
+P 7000 3650
+F 0 "D17" H 7150 3650 50  0000 C CNN
+F 1 "Diode" H 7100 3750 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7100 3750 50  0001 C CNN
+F 3 "" H 7100 3750 50  0001 C CNN
+	1    7000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Switch SW21
+U 1 1 5EEF4EA7
+P 7550 3550
+F 0 "SW21" H 7450 3800 50  0000 C CNN
+F 1 "Switch" H 7500 3600 50  0001 C CNN
+F 2 "KeyboardFootprints:MX_Choc_Symmetric" H 7550 3550 50  0001 C CNN
+F 3 "" H 7550 3550 50  0001 C CNN
+	1    7550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Diode D18
+U 1 1 5EEF4EAD
+P 7400 3650
+F 0 "D18" H 7550 3650 50  0000 C CNN
+F 1 "Diode" H 7500 3750 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 7500 3750 50  0001 C CNN
+F 3 "" H 7500 3750 50  0001 C CNN
+	1    7400 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 6700 3750
+Wire Wire Line
+	6700 3750 7100 3750
+Wire Wire Line
+	7650 1600 7650 2200
+Connection ~ 7650 2200
+Wire Wire Line
+	7650 2200 7650 2800
+Connection ~ 7650 2800
+Wire Wire Line
+	7250 1600 7250 2200
+Connection ~ 7250 2200
+Wire Wire Line
+	7250 2200 7250 2800
+Connection ~ 7250 2800
+Wire Wire Line
+	6850 1600 6850 2200
+Connection ~ 6850 2200
+Wire Wire Line
+	6850 2200 6850 2800
+Wire Wire Line
+	7250 2800 7250 3400
+Wire Wire Line
+	6450 1600 6450 2200
+Connection ~ 6450 2200
+Wire Wire Line
+	6450 2200 6450 2800
+Wire Wire Line
+	6050 1600 6050 2200
+Connection ~ 6050 2200
+Wire Wire Line
+	6050 2200 6050 2800
+$Comp
+L KeyboardLibrary:Diode D19
+U 1 1 5EEFFA04
+P 6200 3650
+F 0 "D19" H 6350 3650 50  0000 C CNN
+F 1 "Diode" H 6300 3750 50  0001 C CNN
+F 2 "KeyboardFootprints:Diode" H 6300 3750 50  0001 C CNN
+F 3 "" H 6300 3750 50  0001 C CNN
+	1    6200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1600 7650 1350
+Connection ~ 7650 1600
+Wire Wire Line
+	7250 1600 7250 1350
+Connection ~ 7250 1600
+Wire Wire Line
+	6850 1600 6850 1350
+Connection ~ 6850 1600
+Wire Wire Line
+	6450 1600 6450 1350
+Connection ~ 6450 1600
+Wire Wire Line
+	6050 1600 6050 1350
+Connection ~ 6050 1600
+Text GLabel 6350 3450 3    50   Input ~ 0
+EGND
+Text GLabel 5950 3400 0    50   Input ~ 0
+E1
+Text GLabel 5950 3500 0    50   Input ~ 0
+E2
+$Comp
+L KeyboardLibrary:REsw SW18
+U 1 1 5EF24DCA
+P 6150 3500
+F 0 "SW18" H 6150 3600 50  0000 C CNN
+F 1 "REsw" H 6150 3500 50  0000 C CNN
+F 2 "KeyboardFootprints:REsw" H 5650 3960 50  0001 C CNN
+F 3 "~" H 6150 3710 50  0001 C CNN
+	1    6150 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 3750
+$Comp
+L KeyboardLibrary:2-Pos SW1
+U 1 1 5EF2D647
+P 4650 1200
+F 0 "SW1" H 4650 1400 50  0000 C CNN
+F 1 "2-Pos" H 4650 1500 50  0000 C CNN
+F 2 "KeyboardFootprints:2Pos-Switch" H 4650 1500 50  0001 C CNN
+F 3 "" H 4650 1500 50  0001 C CNN
+	1    4650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:WS2812B L1
+U 1 1 5EF2E825
+P 4800 2400
+F 0 "L1" H 4800 2775 50  0000 C CNN
+F 1 "WS2812B" H 4775 2875 50  0000 C CNN
+F 2 "KeyboardFootprints:WS2812B-Pad" H 4820 2400 50  0001 C CNN
+F 3 "" H 4820 2400 50  0001 C CNN
+	1    4800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:ResetSW SW2
+U 1 1 5EF303C2
+P 3650 1700
+F 0 "SW2" H 3650 1850 50  0000 C CNN
+F 1 "ResetSW" H 3650 1620 50  0000 C CNN
+F 2 "KeyboardFootprints:ResetSW" H 3650 1700 60  0001 C CNN
+F 3 "" H 3650 1700 60  0000 C CNN
+	1    3650 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L KeyboardLibrary:PJ-320A PJ1
+U 1 1 5EF310C0
+P 4250 3100
+F 0 "PJ1" H 4200 2850 50  0000 C CNN
+F 1 "PJ-320A" H 4250 3100 50  0001 C CNN
+F 2 "KeyboardFootprints:TRRS-PJ-320A-dual" H 4250 3100 50  0001 C CNN
+F 3 "" H 4250 3100 50  0001 C CNN
+	1    4250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Hole H1
+U 1 1 5EF31B9F
+P 10250 1000
+F 0 "H1" H 10250 900 50  0000 C CNN
+F 1 "Hole" H 10250 1100 50  0000 C CNN
+F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10250 950 50  0001 C CNN
+F 3 "" H 10250 950 50  0001 C CNN
+	1    10250 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Hole H2
+U 1 1 5EF32B7A
+P 10550 1000
+F 0 "H2" H 10550 900 50  0000 C CNN
+F 1 "Hole" H 10550 1100 50  0000 C CNN
+F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10550 950 50  0001 C CNN
+F 3 "" H 10550 950 50  0001 C CNN
+	1    10550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Hole H3
+U 1 1 5EF334BC
+P 10400 1250
+F 0 "H3" H 10400 1150 50  0000 C CNN
+F 1 "Hole" H 10400 1350 50  0000 C CNN
+F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10400 1200 50  0001 C CNN
+F 3 "" H 10400 1200 50  0001 C CNN
+	1    10400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Hole H4
+U 1 1 5EF34C14
+P 10250 1500
+F 0 "H4" H 10250 1400 50  0000 C CNN
+F 1 "Hole" H 10250 1600 50  0000 C CNN
+F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10250 1450 50  0001 C CNN
+F 3 "" H 10250 1450 50  0001 C CNN
+	1    10250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L KeyboardLibrary:Hole H5
+U 1 1 5EF34C1A
+P 10550 1500
+F 0 "H5" H 10550 1400 50  0000 C CNN
+F 1 "Hole" H 10550 1600 50  0000 C CNN
+F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10550 1450 50  0001 C CNN
+F 3 "" H 10550 1450 50  0001 C CNN
+	1    10550 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1650 3350 1650
+Wire Wire Line
+	3500 1750 3350 1750
+NoConn ~ 4500 1400
+Text GLabel 4800 1400 3    50   Input ~ 0
+MCURGB
+Text GLabel 4650 2400 3    50   Input ~ 0
+GND
+Text GLabel 4950 2400 3    50   Input ~ 0
+VCC
+Text GLabel 3350 1850 2    50   Input ~ 0
+VCC
+Text GLabel 4800 2400 3    50   Input ~ 0
+DI
+Text GLabel 4650 1400 3    50   Input ~ 0
+DI
+Text GLabel 4450 3000 2    50   Input ~ 0
+DI
+Text GLabel 4200 2700 2    50   Input ~ 0
+VCC
+Text GLabel 1950 1950 0    50   Input ~ 0
+Comm
+Text GLabel 4450 3100 2    50   Input ~ 0
+Comm
+Text GLabel 4450 3200 2    50   Input ~ 0
+GND
+Text GLabel 1950 2250 0    50   Input ~ 0
+E2
+Text GLabel 3350 1950 2    50   Input ~ 0
+MCURGB
+Text GLabel 1950 2350 0    50   Input ~ 0
+E1
+Text GLabel 5550 1950 0    50   Input ~ 0
+Row0
+Text GLabel 3350 2350 2    50   Input ~ 0
+Row0
+Text GLabel 5550 2550 0    50   Input ~ 0
+Row1
+Text GLabel 1950 2650 0    50   Input ~ 0
+Row1
+Text GLabel 5550 3150 0    50   Input ~ 0
+Row2
+Text GLabel 1950 2550 0    50   Input ~ 0
+Row2
+Text GLabel 5550 3750 0    50   Input ~ 0
+Row3
+Text GLabel 6050 1350 1    50   Input ~ 0
+Col0
+Text GLabel 6450 1350 1    50   Input ~ 0
+Col1
+Text GLabel 6850 1350 1    50   Input ~ 0
+Col2
+Text GLabel 7250 1350 1    50   Input ~ 0
+Col3
+Text GLabel 7650 1350 1    50   Input ~ 0
+Col4
+Text GLabel 1950 2150 0    50   Input ~ 0
+Col0
+Text GLabel 1950 2050 0    50   Input ~ 0
+Col1
+Text GLabel 3350 2050 2    50   Input ~ 0
+Col2
+Text GLabel 3350 2150 2    50   Input ~ 0
+Col3
+Text GLabel 3350 2250 2    50   Input ~ 0
+Col4
+Text GLabel 1950 2450 0    50   Input ~ 0
+Row3
+Wire Wire Line
+	6200 3650 6150 3650
+Wire Wire Line
+	7100 3750 7500 3750
+Text GLabel 3450 1650 1    50   Input ~ 0
+GND
+Wire Wire Line
+	5550 3750 6300 3750
+Wire Wire Line
+	7650 2800 7650 3400
+Connection ~ 6300 3750
+Wire Wire Line
+	6300 3750 6700 3750
+Wire Wire Line
+	6200 3250 6450 3250
+Wire Wire Line
+	6450 3250 6450 2800
+Connection ~ 6450 2800
+Text GLabel 1950 1850 0    50   Input ~ 0
+EGND
+Wire Wire Line
+	6850 3400 6850 2800
+Connection ~ 6850 2800
+$EndSCHEMATC
