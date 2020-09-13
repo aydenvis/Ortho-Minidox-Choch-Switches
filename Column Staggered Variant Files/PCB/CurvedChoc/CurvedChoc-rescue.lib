@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# REsw-KeyboardLibrary
+#
+DEF REsw-KeyboardLibrary SW 0 10 Y N 1 F N
+F0 "SW" 0 100 50 H V C CNN
+F1 "REsw-KeyboardLibrary" 0 0 50 H V C CNN
+F2 "" -500 460 50 H I C CNN
+F3 "" 0 210 50 H I C CNN
+$FPLIST
+ RotaryEncoder*Switch*
+$ENDFPLIST
+DRAW
+S 100 150 -100 -50 0 1 0 N
+X A A -200 100 100 R 50 50 1 1 P
+X B B -200 0 100 R 50 50 1 1 P
+X C C 200 50 100 L 50 50 1 1 P
+X S1 S1 50 250 100 D 50 50 1 1 P
+X S2 S2 0 -150 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

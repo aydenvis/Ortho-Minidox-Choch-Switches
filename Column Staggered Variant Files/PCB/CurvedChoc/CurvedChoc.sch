@@ -528,7 +528,7 @@ E1
 Text GLabel 5950 3500 0    50   Input ~ 0
 E2
 $Comp
-L KeyboardLibrary:REsw SW18
+L CurvedChoc-rescue:REsw-KeyboardLibrary SW18
 U 1 1 5EF24DCA
 P 6150 3500
 F 0 "SW18" H 6150 3600 50  0000 C CNN
@@ -589,7 +589,7 @@ U 1 1 5EF31B9F
 P 10250 1000
 F 0 "H1" H 10250 900 50  0000 C CNN
 F 1 "Hole" H 10250 1100 50  0000 C CNN
-F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10250 950 50  0001 C CNN
+F 2 "KeyboardFootprints:Hole_2mm" H 10250 950 50  0001 C CNN
 F 3 "" H 10250 950 50  0001 C CNN
 	1    10250 1000
 	1    0    0    -1  
@@ -600,7 +600,7 @@ U 1 1 5EF32B7A
 P 10550 1000
 F 0 "H2" H 10550 900 50  0000 C CNN
 F 1 "Hole" H 10550 1100 50  0000 C CNN
-F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10550 950 50  0001 C CNN
+F 2 "KeyboardFootprints:Hole_2mm" H 10550 950 50  0001 C CNN
 F 3 "" H 10550 950 50  0001 C CNN
 	1    10550 1000
 	1    0    0    -1  
@@ -611,7 +611,7 @@ U 1 1 5EF334BC
 P 10400 1250
 F 0 "H3" H 10400 1150 50  0000 C CNN
 F 1 "Hole" H 10400 1350 50  0000 C CNN
-F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10400 1200 50  0001 C CNN
+F 2 "KeyboardFootprints:Hole_2mm" H 10400 1200 50  0001 C CNN
 F 3 "" H 10400 1200 50  0001 C CNN
 	1    10400 1250
 	1    0    0    -1  
@@ -622,7 +622,7 @@ U 1 1 5EF34C14
 P 10250 1500
 F 0 "H4" H 10250 1400 50  0000 C CNN
 F 1 "Hole" H 10250 1600 50  0000 C CNN
-F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10250 1450 50  0001 C CNN
+F 2 "KeyboardFootprints:Hole_2mm" H 10250 1450 50  0001 C CNN
 F 3 "" H 10250 1450 50  0001 C CNN
 	1    10250 1500
 	1    0    0    -1  
@@ -633,7 +633,7 @@ U 1 1 5EF34C1A
 P 10550 1500
 F 0 "H5" H 10550 1400 50  0000 C CNN
 F 1 "Hole" H 10550 1600 50  0000 C CNN
-F 2 "KeyboardFootprints:MountingHole_2.9mm" H 10550 1450 50  0001 C CNN
+F 2 "KeyboardFootprints:Hole_2mm" H 10550 1450 50  0001 C CNN
 F 3 "" H 10550 1450 50  0001 C CNN
 	1    10550 1500
 	1    0    0    -1  
@@ -730,4 +730,15 @@ EGND
 Wire Wire Line
 	6850 3400 6850 2800
 Connection ~ 6850 2800
+$Comp
+L KeyboardLibrary:MouseBite M1
+U 1 1 5EF3C917
+P 10100 2000
+F 0 "M1" H 10100 2100 50  0000 C CNN
+F 1 "MouseBite" H 10100 1900 50  0000 C CNN
+F 2 "KeyboardFootprints:Mousebite" H 10100 2000 50  0001 C CNN
+F 3 "" H 10100 2000 50  0001 C CNN
+	1    10100 2000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

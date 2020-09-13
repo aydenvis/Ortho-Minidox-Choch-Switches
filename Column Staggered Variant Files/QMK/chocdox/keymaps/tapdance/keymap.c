@@ -6,11 +6,16 @@ extern keymap_config_t keymap_config;
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
-#define _QWERTY 0
-#define _NUM 1
-#define _NAV 2
-#define _GAM 3
-#define _GANAV 4
+
+enum layer_names {
+  _QWERTY,
+  _NUM,
+  _NAV,
+  _GAM,
+  _GANAV
+};
+
+
 
 #define __ KC_NO
 // #define NAV TO(2)
@@ -31,9 +36,11 @@ enum custom_keycodes {
   RPAREN,
   UND,
   EQU,
+  LENC,
+  RENC,
 };
 
-enum {
+enum tapdance_keys {
   Z = 0,
   W,
   U,
@@ -49,7 +56,12 @@ enum {
 
 };
 
+uint8_t left_encoder_layer = 0; // A variable used to alter encoder behaviour.
+uint8_t right_encoder_layer = 0; // A variable used to alter encoder behaviour.
+uint8_t encoder_layer_count = 2; // The amount of encoder layers
 
+uint8_t underglow_brightness = 120;
+uint8_t orange_var = 0;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -57,9 +69,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,----------------------------------.                  ,----------------------------------.
  * |Q/ESC |  W/( |   E  |   R  |   T  |                  | Y/Gam| U/)  | I/Win|   O  |   P  |
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |A/Shft|   S  |   D  |F/Ctrl|   G  |                  |   H  |J/Alt |   K  |   L  |'/Shft|
+ * |A/Shft|   S  |   D  |   F  |   G  |                  |   H  |J/Alt |   K  |   L  |'/Shft|
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |Z/Home| X/TAB|   C  |   V  |   B  |                  |   N  |   M  |   ,  |   .  | /End |
+ * |Z/Home| X/TAB|   C  |   V  |B/Ctrl|                  |   N  |   M  |   ,  |   .  | /End |
  * `----------------------------------'                  `----------------------------------'
  *                      ,-------------------.       ,-------------------.
  *                      | Del  | Enter| Num |       | Nav| Space| Bkspc |
@@ -67,9 +79,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_QWERTY] = LAYOUT( \
   TD(Q),          TD(W),    KC_E,       KC_R,                  KC_T,                 TD(Y_GAM), TD(U),                 LWIN_T(KC_I),    KC_O,     KC_P,             \
-  LSFT_T(KC_A),   KC_S,     KC_D,      MT(MOD_RCTL, KC_F),    KC_G,                 KC_H,      MT(MOD_RALT, KC_J),    KC_K,            KC_L,     RSFT_T(KC_QUOT),  \
+  LSFT_T(KC_A),   KC_S,     KC_D,       MT(MOD_RCTL, KC_F),    KC_G,                 KC_H,      MT(MOD_RALT, KC_J),    KC_K,            KC_L,     RSFT_T(KC_QUOT),  \
   TD(Z),          TD(X),    KC_C,       KC_V,                  KC_B,                 KC_N,      KC_M,                  KC_COMM,         KC_DOT,   TD(SLS),          \
-                            KC_DEL,     KC_ENTER,              TO(1),                TO(2),     KC_SPC,                KC_BSPC                               \
+                  LENC,     KC_DEL,     KC_ENTER,              TO(1),                TO(2),     KC_SPC,                KC_BSPC,         RENC                      \
 ),
 
 /* Num
@@ -88,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_1,     KC_2,      KC_3,      KC_4,      KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     \
   KC_LSFT,  NPLUS,     NMINUS,    NSTAR,     NSLASH,       LPAREN,  RPAREN,  KC_LBRC, KC_RBRC, KC_SCLN,  \
   EQU,      KC_GRAVE,  UND,       KC_BSLS,   __,           __,      __,      KC_COMM, KC_DOT,  KC_RSFT,       \
-                       KC_DEL,    KC_ENTER,  TO(2),        TO(0),   KC_SPC,  KC_BSPC                     \
+            LENC,    KC_DEL,    KC_ENTER,  TO(2),        TO(0),   KC_SPC,  KC_BSPC, RENC                     \
 ),
 
 /* Nav
@@ -107,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Z,      KC_X,     KC_MS_U,   KC_C,      KC_V,       KC_F,     KC_BTN1,  KC_UP,      KC_BTN2,    RESET,  \
   KC_LCTRL,  KC_MS_L,  KC_MS_D,   KC_MS_R,   KC_F6,      KC_F7,    KC_LEFT,  KC_DOWN,    KC_RIGHT,   KC_LSFT,     \
   KC_F1,     KC_F2,    KC_F3,     KC_F4,     KC_F5,      KC_F8,    KC_F9,    KC_F10,     KC_F11,     KC_F12, \
-                       KC_DEL,    KC_ENTER,  TO(0),      TO(1),    KC_SPC,   KC_BSPC                         \
+             LENC,   KC_DEL,    KC_ENTER,  TO(0),      TO(1),    KC_SPC,   KC_BSPC,    RENC                         \
 ),
 
 /* Gaming
@@ -119,14 +131,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |Z/Shft|   X  |   C  |   V  |   B  |                  |   N  |   M  |   ,  |   .  |   /  |
  * `----------------------------------'                  `----------------------------------'
  *                      ,-------------------.      ,-------------------.
- *                      |  Del | Ent | Tab |      | Esc/4 | Space|Bkspc|
+ *                      |  Ent | Del | Tab |      | Esc/4 | Space|Bkspc|
  *                      `-------------------.      `-------------------.                             
  */
 [_GAM] = LAYOUT( \
   KC_Q,           KC_W,     KC_E,       KC_R,                  KC_T,                                         TD(Y_ALP),  TD(_F3),      TD(_F2),  KC_O,     KC_P,             \
-  KC_A,           KC_S,     KC_D,       MT(MOD_RCTL, KC_F),    KC_G,                                         KC_H,       TD(_F1),      KC_K,     KC_L,     RSFT_T(KC_QUOT),  \
-  LSFT_T(KC_Z),   KC_X,     KC_C,       KC_V,                  KC_B,                                         KC_N,       KC_M,         KC_COMM,  KC_DOT,   KC_SLSH,          \
-                                        KC_DEL,                KC_ENT, KC_TAB,               TD(_GAMENAV),   KC_SPC,     KC_BSPC                               \
+  KC_A,           KC_S,     KC_D,       KC_F,                  KC_G,                                         KC_H,       TD(_F1),      KC_K,     KC_L,     RSFT_T(KC_QUOT),  \
+  LSFT_T(KC_Z),   KC_X,     KC_C,       KC_V,                  MT(MOD_RCTL, KC_B),                                         KC_N,       KC_M,         KC_COMM,  KC_DOT,   KC_SLSH,          \
+                            LENC,     KC_ENT,                KC_DEL, KC_TAB,               TD(_GAMENAV),   KC_SPC,     KC_BSPC,      RENC                               \
 ),
 
 /* Gaming Nav
@@ -145,8 +157,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Z,      KC_X,     __,         KC_C,    KC_V,                                         __,        __,          KC_UP,      __,         __,             \
   KC_LCTRL,  __,       __,         __,      __,                                           __,        KC_LEFT,     KC_DOWN,    KC_RIGHT,   KC_LSFT,  \
   __,        __,       __,         __,      __,                                           __,        __,          __,         __,         __,          \
-                                   KC_DEL,  KC_ENT,  KC_TAB,              TD(_GAMENAV),   KC_SPC,    KC_BSPC                               \
-),
+                       LENC,     KC_DEL,  KC_ENT,  KC_TAB,              TD(_GAMENAV),   KC_SPC,    KC_BSPC,     RENC                               \
+)
 };
 
 void persistant_default_layer_set(uint16_t default_layer) {
@@ -166,6 +178,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       {
       }
       break;
+
     case RPAREN:
       if (record->event.pressed) 
       {
@@ -175,6 +188,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       {
       }
       break;
+
     case UND:
       if (record->event.pressed) 
       {
@@ -184,12 +198,41 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       {
       }
       break;
+
     case EQU:
       if (record->event.pressed) 
       {
         SEND_STRING("=");
       } 
       else 
+      {
+      }
+      break;
+    
+    case LENC:
+      if (record->event.pressed)
+      {
+        // Increment encoder layer with wrap-to-zero
+        if(++left_encoder_layer >= encoder_layer_count)
+        {
+          left_encoder_layer = 0;
+        }
+      }
+      else
+      {
+      }
+      break;
+
+    case RENC:
+      if (record->event.pressed)
+      {
+        // Increment encoder layer with wrap-to-zero
+        if(++right_encoder_layer >= encoder_layer_count)
+        {
+          right_encoder_layer = 0;
+        }
+      }
+      else
       {
       }
       break;
@@ -200,12 +243,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Backlight code
 
 //Color definition
-#define rgblight_set_blue        rgblight_setrgb (0,  0, 255);
-#define rgblight_set_green       rgblight_setrgb (0,  255, 0);
-#define rgblight_set_purple      rgblight_setrgb (200,  0, 200);
-#define rgblight_set_yellow      rgblight_setrgb (255,  255, 0);
-#define rgblight_set_orange      rgblight_setrgb (255,  50, 0);
-#define rgblight_set_red         rgblight_setrgb (255,  0, 0);
+#define rgblight_set_blue        rgblight_sethsv_noeeprom (170, 255, underglow_brightness);
+#define rgblight_set_green       rgblight_sethsv_noeeprom (85, 255, underglow_brightness);
+#define rgblight_set_purple      rgblight_sethsv_noeeprom (191, 255, underglow_brightness);
+#define rgblight_set_orange      rgblight_sethsv_noeeprom (10, 255, underglow_brightness);
+#define rgblight_set_red         rgblight_sethsv_noeeprom (0, 255, underglow_brightness);
+
 
 uint32_t layer_state_set_user(uint32_t  state) {
     switch (biton32(state)) {
@@ -219,14 +262,14 @@ uint32_t layer_state_set_user(uint32_t  state) {
        rgblight_set_green;
         break;
     case _GAM:
-   		rgblight_set_orange;
-    	break;
+      rgblight_set_orange;
+      break;
     case _GANAV:
-		rgblight_set_red;
-	    break;
+      rgblight_set_red;
+      break;
     default:
         rgblight_set_blue;
-       break;
+      break;
     }
   return state;
 };
@@ -238,7 +281,7 @@ void keyboard_post_init_user(void) {
 //Tap Dance Definitions
 void gaming (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
-  	tap_code(KC_Y);
+    tap_code(KC_Y);
   }
   else if (state->count >= 3) {
     layer_on(_GAM);
@@ -248,7 +291,7 @@ void gaming (qk_tap_dance_state_t *state, void *user_data) {
 
 void alpha (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
-  	tap_code(KC_Y);
+    tap_code(KC_Y);
   }
   else if (state->count >= 3) {
     layer_off(_GAM);
@@ -272,3 +315,73 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 };
 
+//Encoder
+void encoder_update_user(uint8_t index, bool clockwise)
+{
+  switch(index)
+  {
+    case 0: // Left encoder
+      switch(left_encoder_layer) // Use the current encoder layer
+      {
+        case 1: // Layer 1
+          if (clockwise)
+          {
+              tap_code16(C(KC_RGHT));
+          } 
+          else 
+          {
+              tap_code16(C(KC_LEFT));
+          }
+          break;
+        
+        case 0: // Layer 0
+          if (clockwise)
+          {
+            tap_code16(KC_RGHT);
+          }
+          else
+          {
+            tap_code16(KC_LEFT);
+          }
+          break;
+      }
+      break;
+      
+    case 1: // Right encoder
+      switch(right_encoder_layer) // Use the current encoder layer
+      {
+        // case 2: // Layer 2
+        //   if (clockwise)
+        //   {
+        //     orange_var++;
+        //   } 
+        //   else
+        //   {
+        //     orange_var--;
+        //   }
+        //   break;
+        case 1: // Layer 1
+          if (clockwise)
+          {
+            tap_code16(C(KC_RGHT));
+          } 
+          else
+          {
+            tap_code16(C(KC_LEFT));
+          }
+          break;
+
+        case 0: // Layer 0
+          if (clockwise) 
+          {
+            tap_code16(KC_RGHT);
+          } 
+          else 
+          {
+            tap_code16(KC_LEFT);
+          }
+          break;
+      }
+      break;
+  }
+}

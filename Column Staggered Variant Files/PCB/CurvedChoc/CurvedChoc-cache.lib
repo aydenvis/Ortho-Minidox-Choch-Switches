@@ -1,6 +1,26 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# CurvedChoc-rescue_REsw-KeyboardLibrary
+#
+DEF CurvedChoc-rescue_REsw-KeyboardLibrary SW 0 10 Y N 1 F N
+F0 "SW" 0 100 50 H V C CNN
+F1 "CurvedChoc-rescue_REsw-KeyboardLibrary" 0 0 50 H V C CNN
+F2 "" -500 460 50 H I C CNN
+F3 "" 0 210 50 H I C CNN
+$FPLIST
+ RotaryEncoder*Switch*
+$ENDFPLIST
+DRAW
+S 100 150 -100 -50 0 1 0 N
+X A A -200 100 100 R 50 50 1 1 P
+X B B -200 0 100 R 50 50 1 1 P
+X C C 200 50 100 L 50 50 1 1 P
+X S1 S1 50 250 100 D 50 50 1 1 P
+X S2 S2 0 -150 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # KeyboardLibrary_2-Pos
 #
 DEF KeyboardLibrary_2-Pos SW 0 40 Y Y 1 F N
@@ -39,6 +59,24 @@ F2 "" 0 -50 50 H I C CNN
 F3 "" 0 -50 50 H I C CNN
 DRAW
 C 0 0 50 0 1 0 N
+ENDDRAW
+ENDDEF
+#
+# KeyboardLibrary_MouseBite
+#
+DEF KeyboardLibrary_MouseBite M 0 40 Y Y 1 F N
+F0 "M" 0 100 50 H V C CNN
+F1 "KeyboardLibrary_MouseBite" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -150 0 50 0 1 0 N
+C -100 0 50 0 1 0 N
+C -50 0 50 0 1 0 N
+C 0 0 50 1 1 0 N
+C 50 0 50 1 1 0 N
+C 100 0 50 1 1 0 N
+C 150 0 50 1 1 0 N
 ENDDRAW
 ENDDEF
 #
@@ -91,26 +129,6 @@ X SDA 6 -700 250 200 R 50 50 1 1 B
 X D4 7 -700 150 200 R 50 50 1 1 B
 X C6 8 -700 50 200 R 50 50 1 1 B
 X D7 9 -700 -50 200 R 50 50 1 1 B
-ENDDRAW
-ENDDEF
-#
-# KeyboardLibrary_REsw
-#
-DEF KeyboardLibrary_REsw SW 0 10 Y N 1 F N
-F0 "SW" 0 100 50 H V C CNN
-F1 "KeyboardLibrary_REsw" 0 0 50 H V C CNN
-F2 "" -500 460 50 H I C CNN
-F3 "" 0 210 50 H I C CNN
-$FPLIST
- RotaryEncoder*Switch*
-$ENDFPLIST
-DRAW
-S 100 150 -100 -50 0 1 0 N
-X A A -200 100 100 R 50 50 1 1 P
-X B B -200 0 100 R 50 50 1 1 P
-X C C 200 50 100 L 50 50 1 1 P
-X S1 S1 50 250 100 D 50 50 1 1 P
-X S2 S2 0 -150 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name CurvedChoc-rescue)(type Legacy)(uri ${KIPRJMOD}/CurvedChoc-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,169 @@
+37517776874924
+KeyboardFootprints
+2Pos-Switch
+
+
+0
+3
+3
+KeyboardFootprints
+Breakout
+
+
+0
+1
+1
+KeyboardFootprints
+Diode
+
+
+0
+2
+2
+KeyboardFootprints
+Hole_2mm
+Mounting Hole 4mm, no annular
+mounting hole 4mm no annular
+0
+0
+0
+KeyboardFootprints
+KailhChoc-1U-Symmetric
+
+
+0
+3
+2
+KeyboardFootprints
+MountingHole_2.9mm
+Mounting Hole 4mm, no annular
+mounting hole 4mm no annular
+0
+0
+0
+KeyboardFootprints
+Mousebite
+
+
+0
+0
+0
+KeyboardFootprints
+MX_Choc_Symmetric
+
+
+0
+25
+2
+KeyboardFootprints
+MX_Removable
+
+
+0
+22
+2
+KeyboardFootprints
+PlateMountingHoleBlackScrew
+
+
+0
+0
+0
+KeyboardFootprints
+ProMicro
+
+
+0
+24
+24
+KeyboardFootprints
+ResetSW
+
+
+0
+4
+2
+KeyboardFootprints
+REsw
+
+rotary encoder
+0
+7
+6
+KeyboardFootprints
+SolderJumper
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+KeyboardFootprints
+TRRS-PJ-320A-dual
+
+
+0
+5
+4
+KeyboardFootprints
+WS2812B-Pad
+
+
+0
+6
+3
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+6
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+6
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E_Vertical_H20mm
+Alps rotary encoder, EC12E... without switch (pins are dummy), vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+4
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... without switch (pins are dummy), vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+4
+Rotary_Encoder
+RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF
+rotary encoder
+0
+7
+6
+Rotary_Encoder
+RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF
+rotary encoder
+0
+7
+6
+Rotary_Encoder
+RotaryEncoder_Alps_EC12E_Vertical_H20mm
+Alps rotary encoder, EC12E..., vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+4
+Rotary_Encoder
+RotaryEncoder_Alps_EC12E_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E..., vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+4
