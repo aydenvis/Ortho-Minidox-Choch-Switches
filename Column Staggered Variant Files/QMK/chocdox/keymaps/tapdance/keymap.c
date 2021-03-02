@@ -38,6 +38,8 @@ enum custom_keycodes {
   EQU,
   LENC,
   RENC,
+  SEMI,
+  COL,
 };
 
 enum tapdance_keys {
@@ -69,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,----------------------------------.                  ,----------------------------------.
  * |Q/ESC |  W/( |   E  |   R  |   T  |                  | Y/Gam| U/)  | I/Win|   O  |   P  |
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |A/Shft|   S  |   D  |   F  |   G  |                  |   H  |J/Alt |   K  |   L  |'/Shft|
+ * |A/Shft|   S  |   D  |F/Ctrl|   G  |                  |   H  |J/Alt |   K  |   L  |'/Shft|
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |Z/Home| X/TAB|   C  |   V  |B/Ctrl|                  |   N  |   M  |   ,  |   .  | /End |
+ * |Z/Home| X/TAB|   C  |   V  |   B  |                  |   N  |   M  |   ,  |   .  | /End |
  * `----------------------------------'                  `----------------------------------'
  *                      ,-------------------.       ,-------------------.
  *                      | Del  | Enter| Num |       | Nav| Space| Bkspc |
@@ -90,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------|                  |------+------+------+------+------|
  * | Shift|   +  |   -  |   *  |   /  |                  |   (  |  )   |  [   |  ]   |   ;  |
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |   =  |  ~/` |   _  |   \  |      |                  |      |      |  ,   |   .  | Shft |
+ * |   =  |  ~/` |   _  |   \  | CAPS |                  |      |      |  ,   |   .  | Shft |
  * `----------------------------------'                  `----------------------------------'
  *                      ,-------------------.       ,-------------------.
  *                      | Del  | Enter| Nav |       | Alp| Space| Bkspc |
@@ -99,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NUM] = LAYOUT( \
   KC_1,     KC_2,      KC_3,      KC_4,      KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     \
   KC_LSFT,  NPLUS,     NMINUS,    NSTAR,     NSLASH,       LPAREN,  RPAREN,  KC_LBRC, KC_RBRC, KC_SCLN,  \
-  EQU,      KC_GRAVE,  UND,       KC_BSLS,   __,           __,      __,      KC_COMM, KC_DOT,  KC_RSFT,       \
+  EQU,      KC_GRAVE,  UND,       KC_BSLS,   KC_CAPSLOCK,           __,      __,      KC_COMM, KC_DOT,  KC_RSFT,       \
             LENC,    KC_DEL,    KC_ENTER,  TO(2),        TO(0),   KC_SPC,  KC_BSPC, RENC                     \
 ),
 
@@ -124,40 +126,40 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Gaming
  * ,----------------------------------.                  ,----------------------------------.
- * |   Q  |   W  |   E  |   R  |   T  |                  |Y/ALP | U/F3 | I/F2 |   O  |   P  |
+ * |Q/Shft|   W  |   E  |   R  |   T  |                  |Y/ALP | U/F3 | I/F2 |   O  |   P  |
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |   A  |   S  |   D  |F/Ctrl|   G  |                  |   H  | J/F1 |   K  |   L  |'/Shft|
+ * |   A  |   S  |   D  |   F  |   G  |                  |   H  | J/F1 |   K  |   L  |'/Shft|
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |Z/Shft|   X  |   C  |   V  |   B  |                  |   N  |   M  |   ,  |   .  |   /  |
+ * |  Z   |   X  |   C  |   V  |B/Ctrl|                  |   N  |   M  |   ,  |   .  |   /  |
  * `----------------------------------'                  `----------------------------------'
- *                      ,-------------------.      ,-------------------.
- *                      |  Ent | Del | Tab |      | Esc/4 | Space|Bkspc|
- *                      `-------------------.      `-------------------.                             
+ *                      ,------------------.      ,---------------------.
+ *                      |  Ent | Del | Tab |      | Esc/NAV| Space|Bkspc|
+ *                      `------------------.      `---------------------.                             
  */
 [_GAM] = LAYOUT( \
-  KC_Q,           KC_W,     KC_E,       KC_R,                  KC_T,                                         TD(Y_ALP),  TD(_F3),      TD(_F2),  KC_O,     KC_P,             \
-  KC_A,           KC_S,     KC_D,       KC_F,                  KC_G,                                         KC_H,       TD(_F1),      KC_K,     KC_L,     RSFT_T(KC_QUOT),  \
-  LSFT_T(KC_Z),   KC_X,     KC_C,       KC_V,                  MT(MOD_RCTL, KC_B),                                         KC_N,       KC_M,         KC_COMM,  KC_DOT,   KC_SLSH,          \
-                            LENC,     KC_ENT,                KC_DEL, KC_TAB,               TD(_GAMENAV),   KC_SPC,     KC_BSPC,      RENC                               \
+  LSFT_T(KC_Q),     KC_W,     KC_E,       KC_R,        KC_T,                                                       TD(Y_ALP),  TD(_F3),      TD(_F2),  KC_O,     KC_P,             \
+  KC_A,             KC_S,     KC_D,       KC_F,        KC_G,                                                       KC_H,       TD(_F1),      KC_K,     KC_L,     RSFT_T(KC_QUOT),  \
+  KC_Z,             KC_X,     KC_C,       KC_V,        MT(MOD_RCTL, KC_B),                                         KC_N,       KC_M,         KC_COMM,  KC_DOT,   KC_SLSH,          \
+                              LENC,       KC_ENT,      KC_DEL,               KC_TAB,               TD(_GAMENAV),   KC_SPC,     KC_BSPC,      RENC                               \
 ),
 
 /* Gaming Nav
  * ,----------------------------------.                  ,----------------------------------.
  * |   Z  |   X  |      |   C  |   V  |                  |      |      |  Up  |      |      |
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * | Ctrl |      |      |      |      |                  |      | Left | Down |Right | Shift|
+ * | Ctrl |      |  -   |  ;   |      |                  |      | Left | Down |Right | Shift|
  * |------+------+------+------+------|                  |------+------+------+------+------|
- * |      |      |      |      |      |                  |      |      |      |      |      |
+ * |      |      |  _   |  :   |      |                  |      |      |      |      |      |
  * `----------------------------------'                  `----------------------------------'
- *                      ,-------------------.      ,-------------------.
- *                      |  Del | Ent | Tab  |      |Esc/4| Space| Bkspc |
- *                      `-------------------.      `-------------------.                              
+ *                      ,-------------------.      ,----------------------.
+ *                      |  Del | Ent | Tab  |      |Esc/GAM| Space| Bkspc |
+ *                      `-------------------.      `----------------------.                              
  */
 [_GANAV] = LAYOUT( \
-  KC_Z,      KC_X,     __,         KC_C,    KC_V,                                         __,        __,          KC_UP,      __,         __,             \
-  KC_LCTRL,  __,       __,         __,      __,                                           __,        KC_LEFT,     KC_DOWN,    KC_RIGHT,   KC_LSFT,  \
-  __,        __,       __,         __,      __,                                           __,        __,          __,         __,         __,          \
-                       LENC,     KC_DEL,  KC_ENT,  KC_TAB,              TD(_GAMENAV),   KC_SPC,    KC_BSPC,     RENC                               \
+  KC_Z,      KC_X,     __,         KC_C,     KC_V,                                         __,        __,          KC_UP,      __,         __,             \
+  KC_LCTRL,  __,       NMINUS,     SEMI,     __,                                           __,        KC_LEFT,     KC_DOWN,    KC_RIGHT,   KC_LSFT,  \
+  __,        __,       UND,        COL,      __,                                           __,        __,          __,         __,         __,          \
+                       LENC,       KC_DEL,   KC_ENT,  KC_TAB,              TD(_GAMENAV),   KC_SPC,    KC_BSPC,     RENC                               \
 )
 };
 
@@ -203,6 +205,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       if (record->event.pressed) 
       {
         SEND_STRING("=");
+      } 
+      else 
+      {
+      }
+      break;
+
+    case SEMI:
+      if (record->event.pressed) 
+      {
+        SEND_STRING(";");
+      } 
+      else 
+      {
+      }
+      break;
+
+    case COL:
+      if (record->event.pressed) 
+      {
+        SEND_STRING(":");
       } 
       else 
       {
@@ -360,25 +382,25 @@ void encoder_update_user(uint8_t index, bool clockwise)
         //     orange_var--;
         //   }
         //   break;
-        case 1: // Layer 1
+        case 0: // Layer 1
           if (clockwise)
           {
-            tap_code16(C(KC_RGHT));
+            tap_code16(KC_WH_D);
           } 
           else
           {
-            tap_code16(C(KC_LEFT));
+            tap_code16(KC_WH_U);
           }
           break;
 
-        case 0: // Layer 0
+        case 1: // Layer 0
           if (clockwise) 
           {
-            tap_code16(KC_RGHT);
+            tap_code(KC_VOLU);
           } 
           else 
           {
-            tap_code16(KC_LEFT);
+            tap_code(KC_VOLD);
           }
           break;
       }

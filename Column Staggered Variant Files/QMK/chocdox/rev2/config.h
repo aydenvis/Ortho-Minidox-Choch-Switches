@@ -28,17 +28,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL
 #define MASTER_LEFT
 
+//RGB
 #define RGB_DI_PIN F4
 #define RGBLED_NUM 12
 #define RGBLIGHT_LIMIT_VAL 255
 
+// Encoders
 #define ENCODERS_PAD_A { C6 }
 #define ENCODERS_PAD_B { D7 }
 
 #define ENCODERS_PAD_A_RIGHT { D7 }
 #define ENCODERS_PAD_B_RIGHT { C6 }
+#define ENCODER_RESOLUTION 4
 
-
+//Mouse
 #define MOUSEKEY_DELAY 300
 #define MOUSEKEY_INTERVAL 50
 #define MOUSEKEY_MAX_SPEED 10
