@@ -34,4 +34,4 @@ TAP_DANCE_ENABLE=yes
 
 SPLIT_KEYBOARD = yes
 
-DEFAULT_FOLDER = chocdox/rev2
+DEFAULT_FOLDER = chocdox/rev3

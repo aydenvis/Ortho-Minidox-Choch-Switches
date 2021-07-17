@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-
+#include "rev3.h"
 extern keymap_config_t keymap_config;
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   TD(Q),          TD(W),    KC_E,       KC_R,                  KC_T,                 TD(Y_GAM), TD(U),                 LWIN_T(KC_I),    KC_O,     KC_P,             \
   LSFT_T(KC_A),   KC_S,     KC_D,       MT(MOD_RCTL, KC_F),    KC_G,                 KC_H,      MT(MOD_RALT, KC_J),    KC_K,            KC_L,     RSFT_T(KC_QUOT),  \
   TD(Z),          TD(X),    KC_C,       KC_V,                  KC_B,                 KC_N,      KC_M,                  KC_COMM,         KC_DOT,   TD(SLS),          \
-                  LENC,     KC_DEL,     KC_ENTER,              TO(1),                TO(2),     KC_SPC,                KC_BSPC,         RENC                      \
+                  LENC,     KC_DEL,     KC_ENTER,              MO(1),                MO(2),     KC_SPC,                KC_BSPC,         RENC                      \
 ),
 
 /* Num
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_1,     KC_2,      KC_3,      KC_4,      KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     \
   KC_LSFT,  NPLUS,     NMINUS,    NSTAR,     NSLASH,       LPAREN,  RPAREN,  KC_LBRC, KC_RBRC, KC_SCLN,  \
   EQU,      KC_GRAVE,  UND,       KC_BSLS,   KC_CAPSLOCK,           __,      __,      KC_COMM, KC_DOT,  KC_RSFT,       \
-            LENC,    KC_DEL,    KC_ENTER,  TO(2),        TO(0),   KC_SPC,  KC_BSPC, RENC                     \
+            LENC,      KC_DEL,    KC_ENTER,  KC_TRNS,    KC_TRNS,  KC_SPC,   KC_BSPC,    RENC                     \
 ),
 
 /* Nav
@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_Z,      KC_X,     KC_MS_U,   KC_C,      KC_V,       KC_F,     KC_BTN1,  KC_UP,      KC_BTN2,    RESET,  \
   KC_LCTRL,  KC_MS_L,  KC_MS_D,   KC_MS_R,   KC_F6,      KC_F7,    KC_LEFT,  KC_DOWN,    KC_RIGHT,   KC_LSFT,     \
   KC_F1,     KC_F2,    KC_F3,     KC_F4,     KC_F5,      KC_F8,    KC_F9,    KC_F10,     KC_F11,     KC_F12, \
-             LENC,   KC_DEL,    KC_ENTER,  TO(0),      TO(1),    KC_SPC,   KC_BSPC,    RENC                         \
+             LENC,     KC_DEL,    KC_ENTER,  KC_TRNS,    KC_TRNS,  KC_SPC,   KC_BSPC,    RENC                         \
 ),
 
 /* Gaming
@@ -338,7 +338,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 //Encoder
-void encoder_update_user(uint8_t index, bool clockwise)
+bool encoder_update_user(uint8_t index, bool clockwise)
 {
   switch(index)
   {
@@ -406,4 +406,5 @@ void encoder_update_user(uint8_t index, bool clockwise)
       }
       break;
   }
+  return false;
 }
